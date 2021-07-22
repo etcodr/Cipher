@@ -1,0 +1,26 @@
+UNIT TESTS
+
+$ ./substitution NQXPOMAFTRHLZGECYJIUWSKDVB
+plaintext: HELLO
+ciphertext: FOLLE
+
+$ ./substitution YTNSHKVEFXRBAUQZCLWDMIPGJO
+plaintext: HELLO
+ciphertext: EHBBQ
+
+$ ./substitution VCHPRZGJNTLSKFBDQWAXEUYMOI
+plaintext: hello, world
+ciphertext: jrssb, ybwsp
+
+Whether the characters in the key itself are uppercase or lowercase doesn’t
+matter. A key of VCHPRZGJNTLSKFBDQWAXEUYMOI is functionally identical to a key
+of vchprzgjntlskfbdqwaxeuymoi (as is, for that matter, VcHpRzGjNtLsKfBdQwAxEuYmOi).
+
+$ ./substitution ABC
+Key must contain 26 characters.
+
+$ ./substitution
+Usage: ./substitution key
+
+$ ./substitution 1 2 3
+Usage: ./substitution key
